@@ -1,4 +1,4 @@
-from mission2.policy.week_policy import get_week_id
+from mission2.policy.week_policy import get_week_id, WED_ID, SAT_ID, SUN_ID
 from mission2.policy.point_policy import get_point
 from mission2.policy.grade_policy import get_grade
 
@@ -30,5 +30,5 @@ class player():
 
     def isRemoved(self):
         if self._grade != "NORMAL" : return False
-        if self._attn[get_week_id("wednesday")] + self._attn[get_week_id("saturday")] + self._attn[get_week_id("sunday")] > 0 : return False
+        if self._attn[WED_ID] + self._attn[SAT_ID] + self._attn[SUN_ID] > 0 : return False
         return True

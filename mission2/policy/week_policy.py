@@ -8,8 +8,18 @@ week_id_point_dic = {
     "sunday": (6, 2),
 }
 
+MON_ID = week_id_point_dic["monday"][0]
+TUE_ID = week_id_point_dic["tuesday"][0]
+WED_ID = week_id_point_dic["wednesday"][0]
+THU_ID = week_id_point_dic["thursday"][0]
+FRI_ID = week_id_point_dic["friday"][0]
+SAT_ID = week_id_point_dic["saturday"][0]
+SUN_ID = week_id_point_dic["sunday"][0]
+
 def get_week_id(wk):
     return week_id_point_dic[wk][0]
 
 def get_week_id_list():
     return week_id_point_dic.values()
+
+

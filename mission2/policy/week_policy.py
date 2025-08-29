@@ -17,7 +17,10 @@ SAT_ID = week_id_point_dic["saturday"][0]
 SUN_ID = week_id_point_dic["sunday"][0]
 
 def get_week_id(wk):
-    return week_id_point_dic[wk][0]
+    try:
+        return week_id_point_dic[wk][0]
+    except:
+        return 7
 
 def get_week_id_list():
     return week_id_point_dic.values()

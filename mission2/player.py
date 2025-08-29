@@ -1,12 +1,13 @@
 from mission2.policy.week_policy import get_week_id, WED_ID, SAT_ID, SUN_ID
 from mission2.policy.point_policy import get_point
 from mission2.policy.grade_policy import get_grade
+from mission2.policy.removed_policy import is_removed
 
 class player():
     def __init__(self, name):
         self._name = name
         self._point = 0
-        self._attn = [0,0,0,0,0,0,0]
+        self._attn = [0,0,0,0,0,0,0,0]
         self._grade = 'NORMAL'
 
     def add_attn(self, wk):
@@ -29,6 +30,4 @@ class player():
         return self._grade
 
     def isRemoved(self):
-        if self._grade != "NORMAL" : return False
-        if self._attn[WED_ID] + self._attn[SAT_ID] + self._attn[SUN_ID] > 0 : return False
-        return True
+        return is_removed(self._grade, self._attn)

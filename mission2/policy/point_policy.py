@@ -14,10 +14,10 @@ def get_attn_point(attn_list):
 
 def get_bonus_point(attn_list):
     bonus_point = 0
-    if attn_list[WED_ID] > 9:
+    if attn_list[WED_ID] >= 10:
         bonus_point += 10
 
-    if attn_list[SAT_ID] + attn_list[SUN_ID] > 9:
+    if attn_list[SAT_ID] + attn_list[SUN_ID] >= 10:
         bonus_point += 10
 
     return bonus_point

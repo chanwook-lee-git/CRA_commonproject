@@ -9,7 +9,6 @@ points = [0] * 100
 grade = [''] * 100
 names = [''] * 100
 
-
 def get_id_by_name(name):
     global id_cnt
 
@@ -54,7 +53,6 @@ def update_grade(id):
         grade[id] = "SILVER"
     else:
         grade[id] = "NORMAL"
-
 
 def input_file():
     try:

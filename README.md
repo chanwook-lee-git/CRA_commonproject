@@ -29,6 +29,11 @@
 
 # 코드 커버리지
 
+<img width="629" height="356" alt="image" src="https://github.com/user-attachments/assets/9002e7a5-d0cc-4708-a6be-511d9b2ef8fe" />
+
+<img width="935" height="847" alt="image" src="https://github.com/user-attachments/assets/090be75f-0f12-4202-9419-f0b126b8e44b" />
+
+
 
 
 

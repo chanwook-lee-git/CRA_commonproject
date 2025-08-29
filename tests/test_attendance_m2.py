@@ -103,7 +103,7 @@ def test_week_policy_invalid_raises_7():
 # player 검증
 def test_player_point_grade_and_removed():
     # player class 생성 후 attn 값을 입력 했을 때, 각 속성별로 예상된 결과를 반환하는지 검증
-    p = player("P")
+    p = player("P", 1)
     for _ in range(10): p.add_attn("wednesday")
     for _ in range(6):  p.add_attn("saturday")
     for _ in range(4):  p.add_attn("sunday")
@@ -112,6 +112,7 @@ def test_player_point_grade_and_removed():
     p.calc_point()
     p.calc_grade()
     assert p.get_name() == "P"
+    assert p.get_id() == 1
     assert p.get_point() == 73
     assert p.get_grade() == "GOLD"
     assert p.isRemoved() is False

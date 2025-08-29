@@ -4,8 +4,9 @@ from mission2.policy.grade_policy import get_grade
 from mission2.policy.removed_policy import is_removed
 
 class player():
-    def __init__(self, name:str):
+    def __init__(self, name:str, id:int):
         self._name = name
+        self._id = id
         self._point = 0
         self._attn = [0,0,0,0,0,0,0,0]
         self._grade = 'NORMAL'
@@ -19,6 +20,9 @@ class player():
     def calc_grade(self):
         self._grade = get_grade(self._point)
         return self._grade
+
+    def get_id(self):
+        return self._id
 
     def get_name(self):
         return self._name

@@ -8,6 +8,6 @@ class player_factory:
         if name in name_player_dic:
             return name_player_dic[name]
         else:
-            p = player(name)
+            p = player(name, len(name_player_dic) + 1)
             name_player_dic[name] = p
             return p

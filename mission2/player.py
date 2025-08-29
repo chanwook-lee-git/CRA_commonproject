@@ -4,13 +4,13 @@ from mission2.policy.grade_policy import get_grade
 from mission2.policy.removed_policy import is_removed
 
 class player():
-    def __init__(self, name):
+    def __init__(self, name:str):
         self._name = name
         self._point = 0
         self._attn = [0,0,0,0,0,0,0,0]
         self._grade = 'NORMAL'
 
-    def add_attn(self, wk):
+    def add_attn(self, wk:str):
         self._attn[get_week_id(wk)] += 1
 
     def calc_point(self):

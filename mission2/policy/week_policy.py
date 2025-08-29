@@ -16,7 +16,7 @@ FRI_ID = week_id_point_dic["friday"][0]
 SAT_ID = week_id_point_dic["saturday"][0]
 SUN_ID = week_id_point_dic["sunday"][0]
 
-def get_week_id(wk):
+def get_week_id(wk:str) -> int:
     try:
         return week_id_point_dic[wk][0]
     except:
